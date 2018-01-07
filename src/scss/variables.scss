@@ -1,0 +1,17 @@
+$primaryColor: #2980b9;
+$lightPrimaryColor: lighten($primaryColor, 20%);
+$darkPrimaryColor: darken($primaryColor, 20%);
+$accentColor: adjust_hue($primaryColor, 180);
+$primaryText: #212121;
+$secondaryText: #757575;
+$dividerColor: #BDBDBD;
+$textIcons: #FFFFFF;
+
+$white: $textIcons;
+$black: #000000;
+
+$dangerColor: #e74c3c;
+$warningColor: #f1c40f;
+$successColor: #2ecc71;
+$infoColor: #5dade2;
+$inverseColor: #34495e;

@@ -1,0 +1,21 @@
+/*
+Globals go here
+*/
+@import './scss/normalize.scss';
+@import './scss/variables.scss';
+@import './scss/mixins.scss';
+@import './scss/typography.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $sansSerif;
+}
+
+
+
+/*
+Components added here, mobile first styling, never shoe-horn again
+*/
+
+@import './components/App.scss';
