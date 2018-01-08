@@ -1,0 +1,46 @@
+a.menu-link {
+  float: right; //right based
+  display: block;
+  padding: 1em;
+  text-decoration:none;
+  color:$primaryText;
+  &:hover,
+  &:focus {
+    color:$primaryColor;
+  }
+  &:active {
+    background-color:$accentColor;
+    color:$white;
+  }
+}
+
+.wrap {
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  &.active {
+    right: 16em; 
+  }
+}
+
+@include responsive(phablet){
+  a.menu-link {
+    display: none;
+  }
+  .wrap.active {
+    right: 0; 
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width:94%;
+  margin: auto;
+  @include responsive(tablet){
+    width: 94%;
+  }
+}

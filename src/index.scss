@@ -5,17 +5,19 @@ Globals go here
 @import './scss/variables.scss';
 @import './scss/mixins.scss';
 @import './scss/typography.scss';
+@import './scss/forms.scss';
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $sansSerif;
-}
+
+/*
+Container added here
+*/
+@import './containers/App.scss';
 
 
 
 /*
-Components added here, mobile first styling, never shoe-horn again
+Components added here
 */
-
-@import './components/App.scss';
+@import './components/Navigation/Navigation.scss';
+@import './components/NotFound/NotFound.scss';
+@import './components/Footer/Footer.scss';
