@@ -1,10 +1,7 @@
 Readable - Udacity React Course Part 2
 ----
 _some reddit type application that uses Redux/React together to demonstrate shared state_
-1. Required on computer
-```
-[Node Js](https://nodejs.org/en/)
-```
+1. Required on computer [Node Js](https://nodejs.org/en/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
