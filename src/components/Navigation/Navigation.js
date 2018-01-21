@@ -5,7 +5,8 @@ import { fetchCategories } from '../../actions/index';
 
 class Navigation extends Component {
 
-    componentDidMount() {  
+    componentDidMount() {
+        //console.log(this.props);  
         this.props.getCategories();
     }
 
@@ -45,16 +46,12 @@ class Navigation extends Component {
     }
 }
 
-const mapStateToProps = ({ categories }) => {
-    return {
+const mapStateToProps = ({ categories }) => ({
         categories: categories.categories
-    }
-}
+});
   
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getCategories: () => dispatch(fetchCategories())
-    }
-}
+const mapDispatchToProps = (dispatch) => ({
+        getCategories: () => dispatch(fetchCategories()) 
+});
 
   export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
