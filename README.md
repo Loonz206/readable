@@ -12,6 +12,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ```
 git clone https://github.com/udacity/reactnd-project-readable-starter
 cd reactnd-project-readable-starter/api-server
+npm install
 node server.js
 ```
 
