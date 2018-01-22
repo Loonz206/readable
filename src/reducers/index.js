@@ -1,6 +1,5 @@
 //Reducers
 import { combineReducers } from 'redux';
-//import { GET_CATEGORIES } from '../actions';
 
 const categories = (state = { categories: [] }, action) => {
     switch (action.type) {

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from '../components/Navigation/Navigation';
 import Footer from '../components/Footer/Footer';
 import NotFound from '../components/NotFound/NotFound';
-import Posts from '../components/Posts/Posts';
+import Default from '../components/Default/Default';
 
 class App extends Component {
   constructor(){
@@ -39,7 +39,7 @@ class App extends Component {
               <main className="main-content" id="main">
                 <Switch>
                   {/* All of the views go here but try to figure out what is to be displayed */}
-                  <Route exact path="/" component={Posts}/>
+                  <Route exact path="/" component={Default}/>
                   {/* If the user malforms a url or something this view is shown */}
                   <Route component={NotFound}/>
                 </Switch>
