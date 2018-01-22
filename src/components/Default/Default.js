@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Default extends Component {
+
+    componentDidMount() {
+        //console.log(this.props); 
+    }
+
     render () {
         return (
             <div className="default-container">
                 <h1>Welcome to Readable</h1>
                 <h2>Posts</h2>
-                <button>Add Post</button>
+                <NavLink to='/create-post'>
+                    <button>Add Post</button>
+                </NavLink>
                 <br/>
                 <label htmlFor="">Filter by: </label>
                 <select name="" id="">

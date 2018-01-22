@@ -25,6 +25,12 @@ select {
     width: 100%;
 }
 
+input:not([type=submit]):not([type=file]) {
+    padding: 8px 16px;
+    display: block;
+    width: 100%;
+}
+
 @include responsive(phablet){
     label,
     select {
