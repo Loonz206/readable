@@ -1,0 +1,20 @@
+button {
+    background-color: $primaryColor;
+    color: $white;
+    padding: 8px 16px;
+    border: 2px solid $darkPrimaryColor;
+    border-radius: 8px;
+    &:hover,
+    &:focus {
+        background-color: $white;
+        border: 2px solid $primaryColor;
+        cursor: pointer;
+        color: $primaryColor;
+    }
+    margin: 20px 0px;
+}
+
+select {
+    height: 34px;
+    width: 240px;
+}
