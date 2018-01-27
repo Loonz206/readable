@@ -17,15 +17,15 @@ export const receivePosts = (posts) => ({
     posts
 });
 
-export const getPosts = () => dispatch => {
-    getAllPosts()
-        .then(posts => dispatch(receivePosts(posts)))
-  }
-
 //get all categories
 export const fetchCategories = () => dispatch => (
     getAllCategories()
       .then(categories => dispatch(getCategories(categories)))
+);
+
+export const getPosts = () => dispatch => (
+    getAllPosts()
+        .then(posts => dispatch(receivePosts(posts)))
 );
 
 

@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Loonz206/readable.svg?branch=master)](https://travis-ci.org/Loonz206/readable)
 [![Coverage Status](https://coveralls.io/repos/github/Loonz206/readable/badge.svg?branch=master)](https://coveralls.io/github/Loonz206/readable?branch=master)
+
 Readable - Udacity React Course Part 2
 ----
 _some reddit type application that uses Redux/React together to demonstrate shared state_

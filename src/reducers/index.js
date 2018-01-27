@@ -13,6 +13,20 @@ const categories = (state = { categories: [] }, action) => {
     }
 }
 
+const getAllPosts = ( state = { posts: [] }, action) => {
+   switch (action.type) {
+     case 'RECEIVE_POSTS': 
+        return {
+          ...state,
+          categories: action.categories
+        }
+        default:
+          return state
+   }
+}
+
+
 export default combineReducers({
-    categories
+    categories,
+    getAllPosts
 });
