@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Loonz206/readable.svg?branch=master)](https://travis-ci.org/Loonz206/readable)
 Readable - Udacity React Course Part 2
 ----
 _some reddit type application that uses Redux/React together to demonstrate shared state_
