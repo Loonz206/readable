@@ -48,6 +48,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
   },
@@ -55,7 +56,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "testCoverage": "node scripts/test.js --env=jsdom --coverage",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "clean": "rm -rf ./build"
   },
   "jest": {
