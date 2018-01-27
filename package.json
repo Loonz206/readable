@@ -55,7 +55,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "testCoverage": "node scripts/test.js --env=jsdom --coverage"
+    "testCoverage": "node scripts/test.js --env=jsdom --coverage",
+    "clean": "rm -rf ./build"
   },
   "jest": {
     "collectCoverageFrom": [
