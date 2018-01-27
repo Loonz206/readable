@@ -54,12 +54,21 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "testCoverage": "node scripts/test.js --env=jsdom --coverage"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Default extends Component {
 
@@ -12,9 +12,9 @@ class Default extends Component {
             <div className="default-container">
                 <h1>Welcome to Readable</h1>
                 <h2>Posts</h2>
-                <NavLink to='/create-post'>
+                <Link to='/create-post'>
                     <button>Add Post</button>
-                </NavLink>
+                </Link>
                 <br/>
                 <label htmlFor="">Filter by: </label>
                 <select name="" id="">
