@@ -1,13 +1,11 @@
 //Actions
 import {
     getAllCategories,
-    getAllPosts,
-    getCommentById
+    getAllPosts
 } from '../utils/ReadableAPI';
 
 export const GET_CATEGORIES = 'GET_CATEGORIES';
 export const GET_POSTS = 'GET_POSTS';
-export const GET_COMMENTS = 'GET_COMMENTS';
 
 export const getCategories = (categories) => ({
     type: GET_CATEGORIES,
@@ -19,10 +17,6 @@ export const getPosts = (posts) => ({
     posts
 });
 
-export const getComments = (comments) => ({
-    type: GET_COMMENTS,
-    comments
-});
 
 //fetchNaming -- these get mentioned in the component
 export const fetchCategories = () => dispatch => (
@@ -35,10 +29,6 @@ export const fetchPosts = () => dispatch => (
         .then(posts => dispatch(getPosts(posts)))
 );
 
-export const fetchComments = () => dispatch => (
-    getCommentById()
-        .then(comments => dispatch(getComments(comments))) 
-);
 
 
 

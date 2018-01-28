@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchCategories, fetchPosts } from '../actions/index';
 import Navigation from '../components/Navigation/Navigation';
 import Default from '../components/Default/Default';
 import CreateEditView from '../components/CreateEditView/CreateEditView';
@@ -27,6 +29,9 @@ class App extends Component {
   componentDidMount(){
     let body = document.body;
     body.classList.add('js');
+
+    this.props.getCategories();
+    this.props.getPosts();
   }
 
   render() {
@@ -38,7 +43,7 @@ class App extends Component {
                 <a href="#menu" className={this.state.condition ? 'menu-link active' : 'menu-link'} onClick={this.handleClick}>
                                     Menu &#9776;
                                 </a>
-                <Navigation/>
+                <Navigation categories={this.props}/>
               </header>
               <main className="main-content" id="main">
                 <Switch>
@@ -59,4 +64,15 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = ({ categories, posts }) => ({
+        categories: categories.categories,
+        posts: posts.posts
+});
+  
+const mapDispatchToProps = (dispatch) => ({
+        getCategories: () => dispatch(fetchCategories()),
+        getPosts: () => dispatch(fetchPosts())
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
