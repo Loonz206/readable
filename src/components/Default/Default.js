@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Post from '../Post/Post';
 
 class Default extends Component {
 
-    componentDidMount() {
-        //console.log(this.props); 
+    componentDidMount(){
     }
 
     render () {
+
+        console.log('Props:', this.props.posts);
+
         return (
             <div className="default-container">
                 <h1>Welcome to Readable</h1>
@@ -23,32 +26,7 @@ class Default extends Component {
                 </select>
                 <hr/>
                 <div className="post-container">
-                    <article>
-                        <h3><a href="">Some Post</a></h3>
-                        <small>author | timeStamp | voteScore</small>
-                        <p>Maecenas sed diam eget risus varius blandit sit amet non 
-                            magna. Vivamus sagittis lacus vel augue laoreet rutrum 
-                            faucibus dolor auctor.
-                            Maecenas sed diam eget risus varius blandit sit amet non 
-                            magna. Vivamus sagittis lacus vel augue laoreet rutrum 
-                            faucibus dolor auctor.</p>
-                    </article>
-
-                    <article>
-                        <h3><a href="">Some Post</a></h3>
-                        <small>author | timeStamp | voteScore</small>
-                        <p>Maecenas sed diam eget risus varius blandit sit amet non 
-                            magna. Vivamus sagittis lacus vel augue laoreet rutrum 
-                            faucibus dolor auctor.</p>
-                    </article>
-
-                    <article>
-                        <h3><a href="">Some Post</a></h3>
-                        <small>author | timeStamp | voteScore</small>
-                        <p>Maecenas sed diam eget risus varius blandit sit amet non 
-                            magna. Vivamus sagittis lacus vel augue laoreet rutrum 
-                            faucibus dolor auctor.</p>
-                    </article>
+                    <Post />
                 </div>
             </div>
         )

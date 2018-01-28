@@ -4,12 +4,11 @@ import { Link, NavLink } from 'react-router-dom';
 class Navigation extends Component {
 
     componentDidMount() {
-
     }
 
     render () {
         // Short-hand categories from props
-        const { categories } = this.props.categories;
+        const { categories } = this.props;
         // Map over the categories into a list which will be links bearing the url and name of categories
         const list = categories.map((item, index) => {
             return (

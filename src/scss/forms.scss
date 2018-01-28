@@ -31,6 +31,10 @@ input:not([type=submit]):not([type=file]) {
     width: 100%;
 }
 
+textarea {
+    display: block;
+}
+
 @include responsive(phablet){
     label,
     select {
