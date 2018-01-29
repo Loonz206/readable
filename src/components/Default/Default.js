@@ -5,11 +5,9 @@ import Post from '../Post/Post';
 class Default extends Component {
 
     componentDidMount(){
-    }
-
+    } 
+    
     render () {
-
-        console.log('Props:', this.props.posts);
 
         return (
             <div className="default-container">
@@ -26,6 +24,9 @@ class Default extends Component {
                 </select>
                 <hr/>
                 <div className="post-container">
+                    <Post />
+                    <Post />
+                    <Post />
                     <Post />
                 </div>
             </div>

@@ -66,7 +66,7 @@ a.menu-link {
    }
 }
 
-@include responsive(tablet){
+@include responsive(laptop){
   .post-container {
     article {
       flex: 1;
