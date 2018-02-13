@@ -3,9 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 
 class Navigation extends Component {
 
-    componentDidMount() {
-    }
-
     render () {
         // Short-hand categories from props
         const { categories } = this.props;
