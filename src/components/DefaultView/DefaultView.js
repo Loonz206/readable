@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../actions/index';
+import Post from '../../components/Post/Post';
 
 class DefaultView extends Component {
 
@@ -24,6 +25,11 @@ class DefaultView extends Component {
                     <option value="">voteScore</option>
                 </select>
                 <hr/>
+                <div className="post-container">
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                </div>
             </div>
         )
     }
