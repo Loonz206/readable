@@ -66,7 +66,7 @@ class App extends Component {
 }
 
 const mapStateToProps = ({ categories }) => ({
-        categories: categories.categories
+        categories: categories.categories || []
 });
   
 const mapDispatchToProps = (dispatch) => ({

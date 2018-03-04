@@ -19,9 +19,10 @@ class DefaultView extends Component {
             return (
                 <article key={index}>
                     <h3><a href="">{post.title}</a></h3>
-                    <small>{post.id}</small>
-                    <p className="small-caps">{post.author} | {formatTimestamp(post.timestamp)} | {post.category} | {post.voteScore}</p>
+                    <small>{post.author} - {formatTimestamp(post.timestamp)}</small>
+                    <p className="small-caps">{post.category}</p>
                     <p>{post.body}</p>
+                    <small>{post.voteScore}</small>
                 </article>
             )
         });
