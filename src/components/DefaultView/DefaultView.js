@@ -7,7 +7,7 @@ import Post from '../../components/Post/Post';
 class DefaultView extends Component {
 
     componentDidMount(){
-        
+        this.props.getPosts();
     }
 
     render () {
