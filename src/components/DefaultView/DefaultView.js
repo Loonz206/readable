@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../actions/index';
-import Post from '../../components/Post/Post';
+import { formatTimestamp } from '../../utils/Utils';
 
 class DefaultView extends Component {
 
@@ -11,6 +11,21 @@ class DefaultView extends Component {
     }
 
     render () {
+
+        // Short-hand categories from props
+        const { posts } = this.props;
+        // Map over the categories into a list which will be links bearing the url and name of categories
+        const postList = posts.map((post, index) => {
+            return (
+                <article key={index}>
+                    <h3><a href="">{post.title}</a></h3>
+                    <small>{post.id}</small>
+                    <p className="small-caps">{post.author} | {formatTimestamp(post.timestamp)} | {post.category} | {post.voteScore}</p>
+                    <p>{post.body}</p>
+                </article>
+            )
+        });
+
         return (
             <div className="default-container">
                 <h1>Welcome to Readable</h1>
@@ -21,14 +36,12 @@ class DefaultView extends Component {
                 <br/>
                 <label htmlFor="">Filter by: </label>
                 <select name="" id="">
-                    <option value="">timeStamp</option>
+                    <option value="">timestamp</option>
                     <option value="">voteScore</option>
                 </select>
                 <hr/>
                 <div className="post-container">
-                    <Post/>
-                    <Post/>
-                    <Post/>
+                    {postList}
                 </div>
             </div>
         )
@@ -36,7 +49,7 @@ class DefaultView extends Component {
 } 
     
 const mapStateToProps = ({ posts }) => ({
-    posts: posts.posts
+    posts: posts.posts || []
 });
 
 const mapDispatchToProps = (dispatch) => ({
