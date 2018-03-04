@@ -10,7 +10,9 @@ import reducer from './reducers';
 import registerServiceWorker from './utils/registerServiceWorker';
 
 const middleware = applyMiddleware(thunk, createLogger());
-const store = createStore(reducer, middleware);
+const store = createStore(reducer, middleware,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 //log the state to see how the data is getting into the store
 console.log(store.getState());
 
