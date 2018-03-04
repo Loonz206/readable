@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Post from '../Post/Post';
+import Postlist from '../../containers/Postlist';
 
 const Default = (props) => (
     <div className="default-container">
@@ -16,12 +16,7 @@ const Default = (props) => (
             <option value="">voteScore</option>
         </select>
         <hr/>
-        <div className="post-container">
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-        </div>
+        <Postlist />
     </div>
 )
 

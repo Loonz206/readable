@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/index';
+//import Post from '../components/Post/Post';
 
 class Postlist extends Component {
 
@@ -9,8 +10,12 @@ class Postlist extends Component {
     }
 
     render () {
+
+        const { posts } = this.props;
+        console.log('Posts:', posts, typeof posts);
+
         return (
-            <h1>Hello This is postlist</h1>
+            <h1>Hello World</h1>
         )
     }
 }

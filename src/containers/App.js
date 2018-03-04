@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchCategories, fetchPosts } from '../actions/index';
+import { fetchCategories } from '../actions/index';
 import Navigation from '../components/Navigation/Navigation';
 import Default from '../components/Default/Default';
 import CreateEditView from '../components/CreateEditView/CreateEditView';
@@ -30,12 +30,11 @@ class App extends Component {
     body.classList.add('js');
 
     this.props.getCategories();
-    this.props.getPosts();
   }
 
   render() {
 
-    const { posts, categories } = this.props;
+    const { categories } = this.props;
 
     return (
       <Router>
@@ -50,7 +49,7 @@ class App extends Component {
               <main className="main-content" id="main">
                 <Switch>
                   {/* Default view for application with all of the Posts for each Category */}
-                  <Route exact path="/" posts={posts} component={Default}></Route>
+                  <Route exact path="/" component={Default}></Route>
                   <Route exact path="/create-post" component={CreateEditView}/>
                   <Route exact path='/:category' component={CategoryView}/>
                   <Route exact path='/:category/:post_id' component={CategoryView} />
@@ -66,14 +65,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ categories, posts }) => ({
-        categories: categories.categories,
-        posts: posts.posts
+const mapStateToProps = ({ categories }) => ({
+        categories: categories.categories
 });
   
 const mapDispatchToProps = (dispatch) => ({
-        getCategories: () => dispatch(fetchCategories()),
-        getPosts: () => dispatch(fetchPosts())
+        getCategories: () => dispatch(fetchCategories())
 });
 
 
