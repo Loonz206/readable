@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Postlist from '../../containers/Postlist';
+import Postlist from '../../components/PostList/Postlist';
 
-const Default = (props) => (
+const DefaultView = (props) => (
     <div className="default-container">
         <h1>Welcome to Readable</h1>
         <h2>Posts</h2>
@@ -20,4 +20,4 @@ const Default = (props) => (
     </div>
 )
 
-export default Default;
+export default DefaultView;
